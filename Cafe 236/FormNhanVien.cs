@@ -15,9 +15,19 @@ namespace Cafe_236
         public FormNhanVien()
         {
             InitializeComponent();
+            loadData(this, null);
         }
 
-        private void btnThemQLDH_Click(object sender, EventArgs e)
+        private void loadData(object sender, EventArgs e)
+        {
+            var dbContext = new _236DataContext(); // Thay YourDataContext bằng lớp DataContext của bạn
+
+            var query = from donhang in dbContext.DonHangs
+                        select donhang;
+            dGVqldh.DataSource = query.ToList();
+        }
+
+            private void btnThemQLDH_Click(object sender, EventArgs e)
         {
             // Tạo đối tượng Data Context
             var context = new _236DataContext();
