@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="POS" Class="_236DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CONG\SQLEXPRESS01;Initial Catalog=POS;Integrated Security=True" SettingsObjectName="Cafe_236.Properties.Settings" SettingsPropertyName="POSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CongThuc" Member="CongThucs">
+    <Type Name="CongThuc">
+      <Column Name="CongThucID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DoUongID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NguyenLieuID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DoUong_CongThuc" Member="DoUong" ThisKey="DoUongID" OtherKey="DoUongID" Type="DoUong" IsForeignKey="true" />
+      <Association Name="NguyenLieu_CongThuc" Member="NguyenLieu" ThisKey="NguyenLieuID" OtherKey="NguyenLieuID" Type="NguyenLieu" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SLDoUong" Member="SLDoUongs">
+    <Type Name="SLDoUong">
+      <Column Name="SLDoUongID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DonHangID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DoUongID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DonHang_SLDoUong" Member="DonHang" ThisKey="DonHangID" OtherKey="DonHangID" Type="DonHang" IsForeignKey="true" />
+      <Association Name="DoUong_SLDoUong" Member="DoUong" ThisKey="DoUongID" OtherKey="DoUongID" Type="DoUong" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DonHang" Member="DonHangs">
+    <Type Name="DonHang">
+      <Column Name="DonHangID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ngay" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TongSoTien" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="DonHang_SLDoUong" Member="SLDoUongs" ThisKey="DonHangID" OtherKey="DonHangID" Type="SLDoUong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DoUong" Member="DoUongs">
+    <Type Name="DoUong">
+      <Column Name="DoUongID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenDoUong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Gia" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Loai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="DoUong_CongThuc" Member="CongThucs" ThisKey="DoUongID" OtherKey="DoUongID" Type="CongThuc" />
+      <Association Name="DoUong_SLDoUong" Member="SLDoUongs" ThisKey="DoUongID" OtherKey="DoUongID" Type="SLDoUong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NguyenLieu" Member="NguyenLieus">
+    <Type Name="NguyenLieu">
+      <Column Name="NguyenLieuID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenNguyenLieu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GiaNguyenLieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SLNguyenLieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="NguyenLieu_CongThuc" Member="CongThucs" ThisKey="NguyenLieuID" OtherKey="NguyenLieuID" Type="CongThuc" />
+      <Association Name="NguyenLieu_Nhap" Member="Nhaps" ThisKey="NguyenLieuID" OtherKey="NguyenLieuID" Type="Nhap" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Nhap" Member="Nhaps">
+    <Type Name="Nhap">
+      <Column Name="NhapID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NguyenLieuID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SLNhap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tongChi" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="NguyenLieu_Nhap" Member="NguyenLieu" ThisKey="NguyenLieuID" OtherKey="NguyenLieuID" Type="NguyenLieu" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
