@@ -8,6 +8,10 @@ Trang gọi đồ uống
 
 ![DN](https://github.com/NguyenDoCong/POS-LINQ/blob/master/img/order.png?raw=true)
 
+Trang quản lý bàn
+
+![DN](https://github.com/NguyenDoCong/POS-LINQ/blob/master/img/table.png?raw=true)
+
 Trang quản lý
 
 ![DN](https://github.com/NguyenDoCong/POS-LINQ/blob/master/img/manage.png?raw=true)
@@ -19,11 +23,6 @@ Trang thống kê bán ra
 Trang thống kê thu chi
 
 ![DN](https://github.com/NguyenDoCong/POS-LINQ/blob/master/img/statistic.png?raw=true)
-
-Trang thống kê quản lý bàn
-
-![DN](https://github.com/NguyenDoCong/POS-LINQ/blob/master/img/table.png?raw=true)
-
 
 Trang quản lý tài khoản
 
