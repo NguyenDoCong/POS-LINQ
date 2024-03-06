@@ -1,5 +1,30 @@
 Ứng dụng đơn giản với giao diện Winform và các chức năng CRUD, sử dụng thư viện LINQ
 
+Trang đăng nhập
+
+![DN](https://github.com/NguyenDoCong/POS-LINQ/blob/master/img/login.png?raw=true)
+
+Trang gọi đồ uống
+
+![DN](https://github.com/NguyenDoCong/POS-LINQ/blob/master/img/order.png?raw=true)
+
+Trang quản lý
+
+![DN](https://github.com/NguyenDoCong/POS-LINQ/blob/master/img/manage.png?raw=true)
+
+Trang thống kê bán ra
+
+![DN](https://github.com/NguyenDoCong/POS-LINQ/blob/master/img/sold-statistic.png?raw=true)
+
+Trang thống kê thu chi
+
+![DN](https://github.com/NguyenDoCong/POS-LINQ/blob/master/img/statistic.png?raw=true)
+
+Trang thống kê quản lý bàn
+
+![DN](https://github.com/NguyenDoCong/POS-LINQ/blob/master/img/table.png?raw=true)
+
+
 Trang quản lý tài khoản
 
 ![QLTK](https://github.com/NguyenDoCong/POS-LINQ/blob/master/img/account%20management.png?raw=true)
