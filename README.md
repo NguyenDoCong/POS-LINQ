@@ -12,7 +12,7 @@ Trang quản lý bàn
 
 ![DN](https://github.com/NguyenDoCong/POS-LINQ/blob/master/img/table.png?raw=true)
 
-Trang quản lý
+Trang quản lý chung
 
 ![DN](https://github.com/NguyenDoCong/POS-LINQ/blob/master/img/manage.png?raw=true)
 
