@@ -9,11 +9,11 @@
 ![DN](https://github.com/NguyenDoCong/POS-LINQ/blob/master/img/login.png?raw=true)
 
 ### Trang gọi đồ uống
-
+Đồ uống được chia theo tab, sau đó bấm vào từng nút để chọn đồ uống
 ![DN](https://github.com/NguyenDoCong/POS-LINQ/blob/master/img/order.png?raw=true)
 
 ### Trang quản lý bàn
-
+Bàn có các trạng thái Trống và Đã đặt chỗ. Bấm vào từng bàn để quản lý đơn hàng của bàn.
 ![DN](https://github.com/NguyenDoCong/POS-LINQ/blob/master/img/table.png?raw=true)
 
 ### Trang quản lý chung
